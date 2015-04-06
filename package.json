@@ -1,15 +1,17 @@
 {
-  "name": "alchemyapi_node",
-  "version": "0.10.1",
-  "private": true,
-  "scripts": {
-    "start": "node app.js"
+  "name"         : "node-todo",
+  "version"      : "0.0.0",
+  "description"  : "AlchemyAPI application.",
+  "main"         : "server.js",
+  "author"       : "Siva",
+  "dependencies" : {
+    "express"    : "~4.7.2",
+    "rimraf"     : "2.2.2",
+    "mkdirp"     : "0.3.5",
+    "consolidate": "*"
   },
-  "main": "./alchemyapi.js",
-  "dependencies": {
-    "consolidate": "^0.9.1",
-    "dustjs-linkedin": "^2.0.3",
-    "express": "^3.4.0",
-    "request": "^2.27.0"
+  "repository"   : {
+    "type"            : "git",
+    "url"             : "http://github.com/npm/npm.git"
   }
 }

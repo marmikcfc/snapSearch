@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="scotchTodo">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>snapSearch</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"><!-- load bootstrap -->
+	<link media="screen" rel="stylesheet" href="css/jquery.tag.css" type="text/css" />
+	<link media="screen" rel="stylesheet" href="css/jquery-ui.custom.css" type="text/css" />
+	<link rel="stylesheet" href="css/alchemicss.css"><!-- load bootstrap -->
+	<!-- SPELLS -->
+	<script src="js/angular.min.js"></script><!-- load angular -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src='js/jquery-ui.min.js'></script>
+	<script src="js/jquery.tag.js"></script>
+	<script src="js/core.js"></script>
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS WITH INITIALIZE FUNCTION -->
+<body ng-controller="mainController">
+	<div class="container">
+		<!-- FORM TO CREATE TODOS -->
+		<div id="todo-form" class="row">
+			<div class="col-sm-9 col-sm-offset-2 text-center">
+				<h1 class="pageHeadding">snapSearch</h1>
+				<form>
+				    <div class="input-group" id="textEntry">
+				    	<input id="searchinput" type="text" class="form-control input-lg" placeholder="Enter Image URL " ng-model="formData.text">
+				    	<span class="input-group-btn">
+				    		<!-- <a class="btn btn-info btn-lg" onclick="$('input[id=lefile]').click();">Browse</a> -->
+				    		<button type="submit" class="btn btn-info btn-lg" ng-click="createTodo()">Submit</button>
+				    	</span>
+				    </div><!-- /input-group -->
+				</form>
+
+<h3>Trial links</h3>
+
+<ul>
+	
+	<li> http://i1-news.softpedia-static.com/images/news2/Martin-Scorsese-Working-on-Goodfellas-TV-Series-2.jpg </li>
+	<li> http://upload.wikimedia.org/wikipedia/en/7/7b/Goodfellas.jpg </li>
+	<li> http://i.cdn.turner.com/trutv/trutv.com/graphics/photos/gangsters_outlaws/outlaws/major_art_thefts/1-2-Mona-Lisa-painting.jpg </li>
+	<li> http://farm2.static.flickr.com/1413/725058264_4ad929d2b1.jpg </li>
+	<li> http://www.50birds.com/images/mushrooms/Field%20or%20Horse%20Mushroom%20Agaricus%20arvensis%20Edible%20ng-54.jpg </li>
+	<li> https://c402277.ssl.cf1.rackcdn.com/photos/1620/images/carousel_small/bengal-tiger-why-matter_7341043.jpg?1345548942 </li>
+	<li> <!-- <a href="#" ng-click="searchThis(this.innerHTML)" > --> http://static.ibnlive.in.com/ibnlive/pix/sitepix/01_2013/shahrukhkhan-jan30.jpg <!--  </a> --> </li>
+</ul>
+
+
+			</div>
+		</div>
+		<div class="imageOutput" style="position:relative;top:0px;left:319px">
+			<img src="" id="imageT" height="340px"/>
+		</div>
+		<!-- Alchamai API List for Text-->
+		<div class="container" ng-show="showResultsText">
+			<div class="row">
+				<ul class="nav nav-tabs tablistPage" role="tablist">
+				  <li role="presentation" class="active"><a href="#">jSON</a></li>
+				  <li role="presentation" class="visulaTab"><a href="#">Visual</a></li>
+				</ul>
+		        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container">
+			          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 bhoechie-tab-menu">
+		              <div class="list-group">
+		                <a href="#" class="list-group-item active text-center faceTab">Image Text</a>
+		                <a href="#" class="list-group-item text-center">Face Tagging</a>
+		                <a href="#" class="list-group-item text-center ">Image Keywords Tagging</a>
+		                <a href="#" class="list-group-item text-center">Image Parsing</a>
+		              </div>
+		            </div>
+		          	<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 bhoechie-tab">
+		                <div class="bhoechie-tab-content" active ng-bind-html='imageTextTagsJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='imageFaceTagsJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='image_keywordsJson'></div>
+		                <div class="bhoechie-tab-content" ng-bind-html='imageJson'></div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="tag" data-width="15%">Text</th>
+						          <th sortable-header col="score" data-width="15%">Confidence</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr data-ng-repeat="iTextTags in imageTextTags | orderBy:predicate:reverse">
+						          <td>{{iTextTags.candidates[0].text}}</td>
+						          <td>{{iTextTags.candidates[0].confidence}}</td>
+						        </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="name" data-width="15%">Name</th>
+						          <th sortable-header col="gender" data-width="15%">Gender</th>
+						          <th sortable-header col="ageGroup" data-width="15%">Age Group</th>
+						          <th sortable-header col="subTypes" data-width="15%">Subtypes</th>
+						          <th sortable-header col="website" data-width="15%">Website</th>
+						          <th sortable-header col="linkedData" data-width="15%">Linked Data</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr data-ng-repeat="fTag in imageFaceTags">
+						          <td>{{fTag.identity.name}}</td>
+						          <td>{{fTag.gender.gender}}</td>
+						          <td>{{fTag.age.ageRange}}</td>
+						          <td>
+						          	<span data-ng-repeat="subType in fTag.identity.disambiguated.subType">{{subType}}<br/></span></td>
+						          <td>{{fTag.identity.disambiguated.website}}</td>
+						          <td>{{fTag.identity.disambiguated.dbpedia}}, {{fTag.identity.disambiguated.freebase}}</td>
+						        </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="tag" data-width="15%">Tag</th>
+						          <th sortable-header col="score" data-width="15%">Score</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr data-ng-repeat="ikeyword in image_keywords">
+						          <td>{{ikeyword.text}}</td>
+						          <td>{{ikeyword.score}}</td>
+						        </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		                <div class="bhoechie-tab-content-visual">
+						    <table class="table table-striped table-bordered">
+						      <thead>
+						        <tr>
+						          <th sortable-header col="text" data-width="15%">Image</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <tr>
+						          <td>{{image.text}}</td>
+							    </tr>
+						      </tbody>
+						    </table>
+		                </div>
+		            </div>
+		        </div>
+		  </div>
+		</div>
+		  <img src="/images/sgo-loading.gif" class="img-responsive" ng-show="showProgress" alt="Responsive image">
+		<br/>
+		<br/>
+	</div>
+ 
+
+</body>
+<script>
+var myApp,
+	selectViewIndex = 0,
+	selectTabIndex = 0;
+
+$(document).ready(function() {
+	$(".imageShowDiv").hide();
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        selectTabIndex = $(this).index();
+    	if(selectViewIndex == 1){
+    		$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active"); 
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").eq(selectTabIndex).addClass("active");
+		} else {
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(selectTabIndex).addClass("active");
+		}
+    });
+   $("ul.tablistPage>li").click(function(e) {
+    	e.preventDefault();
+    	$(this).siblings('.active').removeClass("active");
+    	$(this).addClass("active");
+    	selectViewIndex = $(this).index();
+    	if(selectViewIndex == 1){
+    		$("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").eq(selectTabIndex).addClass("active");
+		} else {
+	        $("div.bhoechie-tab>div.bhoechie-tab-content-visual").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(selectTabIndex).addClass("active");
+		}
+    });
+});
+</script>
+<script type="text/javascript">
+	var data = [];
+	var settings = [];
+
+	$('#searchinput').change(function(event) {
+		$(".imageShowDiv").show();
+		$("#imageT").attr("src",$('#searchinput').val());
+	});
+
+	function setTextTags(positionX, positionY, width, height) {
+        var htmlStr = '';
+        var topPos = (parseInt(positionY));
+        var leftPos = (parseInt(positionX));
+        var boxWidth = (parseInt(width));
+        var boxHeight = (parseInt(height));
+        if (topPos < 0) {
+          topPos = 0;
+        }
+        if (leftPos < 0) {
+          leftPos = 0;
+        }
+        /*if ((topPos + boxHeight) > DEFAULTS.image_height) {
+          boxHeight = DEFAULTS.image_height - topPos;
+        }
+        if ((leftPos + boxWidth) > DEFAULTS.image_width) {
+          boxWidth = DEFAULTS.image_width - leftPos;
+        }*/
+        
+        htmlStr ='<div class="faceBox" style="border:4px solid rgba(255, 255, 255, 0.65);position:absolute;z-index:55;display:inline-block';
+        htmlStr += ';top:' + topPos; 
+        htmlStr += ';left:' + leftPos; 
+        htmlStr += ';width:' + boxWidth; 
+        htmlStr += ';height:' + boxHeight; 
+        htmlStr += '">&nbsp;</div>';
+        $( ".imageOutput" ).prepend(htmlStr);
+        //return htmlStr;
+      }
+</script>
+</html>

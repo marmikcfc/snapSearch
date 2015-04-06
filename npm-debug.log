@@ -1,31 +1,18 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
-1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
 2 info using npm@1.4.28
-3 info using node@v0.10.35
-4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
+3 info using node@v0.10.32
+4 warn package.json node-todo@0.0.0 No README data
 5 verbose readDependencies using package.json deps
-6 verbose install where, deps [ 'C:\\Users\\Marmik\\Desktop\\snapSearch\\alchemyapi_node',
-6 verbose install   [ 'express', 'request', 'consolidate', 'dustjs-linkedin' ] ]
-7 info preinstall alchemyapi_node@0.10.1
+6 verbose install where, deps [ '/Users/skannedara/Documents/MyProject/Alkamai_Text_From_Image',
+6 verbose install   [ 'express', 'rimraf', 'mkdirp', 'consolidate' ] ]
+7 info preinstall node-todo@0.0.0
 8 verbose readDependencies using package.json deps
-9 verbose cache add [ 'express@3.4.0', null ]
-10 verbose cache add name=undefined spec="express@3.4.0" args=["express@3.4.0",null]
-11 verbose parsed url { protocol: null,
-11 verbose parsed url   slashes: null,
-11 verbose parsed url   auth: null,
-11 verbose parsed url   host: null,
-11 verbose parsed url   port: null,
-11 verbose parsed url   hostname: null,
-11 verbose parsed url   hash: null,
-11 verbose parsed url   search: null,
-11 verbose parsed url   query: null,
-11 verbose parsed url   pathname: 'express@3.4.0',
-11 verbose parsed url   path: 'express@3.4.0',
-11 verbose parsed url   href: 'express@3.4.0' }
-12 verbose cache add [ 'request@~2.27.0', null ]
-13 verbose cache add name=undefined spec="request@~2.27.0" args=["request@~2.27.0",null]
+9 verbose already installed skipping express@~4.7.2 /Users/skannedara/Documents/MyProject/Alkamai_Text_From_Image
+10 verbose already installed skipping rimraf@2.2.2 /Users/skannedara/Documents/MyProject/Alkamai_Text_From_Image
+11 verbose already installed skipping mkdirp@0.3.5 /Users/skannedara/Documents/MyProject/Alkamai_Text_From_Image
+12 verbose cache add [ 'consolidate@*', null ]
+13 verbose cache add name=undefined spec="consolidate@*" args=["consolidate@*",null]
 14 verbose parsed url { protocol: null,
 14 verbose parsed url   slashes: null,
 14 verbose parsed url   auth: null,
@@ -35,348 +22,287 @@
 14 verbose parsed url   hash: null,
 14 verbose parsed url   search: null,
 14 verbose parsed url   query: null,
-14 verbose parsed url   pathname: 'request@~2.27.0',
-14 verbose parsed url   path: 'request@~2.27.0',
-14 verbose parsed url   href: 'request@~2.27.0' }
-15 verbose cache add [ 'consolidate@~0.9.1', null ]
-16 verbose cache add name=undefined spec="consolidate@~0.9.1" args=["consolidate@~0.9.1",null]
-17 verbose parsed url { protocol: null,
-17 verbose parsed url   slashes: null,
-17 verbose parsed url   auth: null,
-17 verbose parsed url   host: null,
-17 verbose parsed url   port: null,
-17 verbose parsed url   hostname: null,
-17 verbose parsed url   hash: null,
-17 verbose parsed url   search: null,
-17 verbose parsed url   query: null,
-17 verbose parsed url   pathname: 'consolidate@~0.9.1',
-17 verbose parsed url   path: 'consolidate@~0.9.1',
-17 verbose parsed url   href: 'consolidate@~0.9.1' }
-18 verbose cache add [ 'dustjs-linkedin@~2.0.3', null ]
-19 verbose cache add name=undefined spec="dustjs-linkedin@~2.0.3" args=["dustjs-linkedin@~2.0.3",null]
-20 verbose parsed url { protocol: null,
-20 verbose parsed url   slashes: null,
-20 verbose parsed url   auth: null,
-20 verbose parsed url   host: null,
-20 verbose parsed url   port: null,
-20 verbose parsed url   hostname: null,
-20 verbose parsed url   hash: null,
-20 verbose parsed url   search: null,
-20 verbose parsed url   query: null,
-20 verbose parsed url   pathname: 'dustjs-linkedin@~2.0.3',
-20 verbose parsed url   path: 'dustjs-linkedin@~2.0.3',
-20 verbose parsed url   href: 'dustjs-linkedin@~2.0.3' }
-21 verbose cache add name="express" spec="3.4.0" args=["express","3.4.0"]
-22 verbose parsed url { protocol: null,
-22 verbose parsed url   slashes: null,
-22 verbose parsed url   auth: null,
-22 verbose parsed url   host: null,
-22 verbose parsed url   port: null,
-22 verbose parsed url   hostname: null,
-22 verbose parsed url   hash: null,
-22 verbose parsed url   search: null,
-22 verbose parsed url   query: null,
-22 verbose parsed url   pathname: '3.4.0',
-22 verbose parsed url   path: '3.4.0',
-22 verbose parsed url   href: '3.4.0' }
-23 verbose addNamed [ 'express', '3.4.0' ]
-24 verbose addNamed [ '3.4.0', '3.4.0' ]
-25 verbose cache add name="request" spec="~2.27.0" args=["request","~2.27.0"]
-26 verbose parsed url { protocol: null,
-26 verbose parsed url   slashes: null,
-26 verbose parsed url   auth: null,
-26 verbose parsed url   host: null,
-26 verbose parsed url   port: null,
-26 verbose parsed url   hostname: null,
-26 verbose parsed url   hash: null,
-26 verbose parsed url   search: null,
-26 verbose parsed url   query: null,
-26 verbose parsed url   pathname: '~2.27.0',
-26 verbose parsed url   path: '~2.27.0',
-26 verbose parsed url   href: '~2.27.0' }
-27 verbose addNamed [ 'request', '~2.27.0' ]
-28 verbose addNamed [ null, '>=2.27.0-0 <2.28.0-0' ]
-29 verbose cache add name="consolidate" spec="~0.9.1" args=["consolidate","~0.9.1"]
-30 verbose parsed url { protocol: null,
-30 verbose parsed url   slashes: null,
-30 verbose parsed url   auth: null,
-30 verbose parsed url   host: null,
-30 verbose parsed url   port: null,
-30 verbose parsed url   hostname: null,
-30 verbose parsed url   hash: null,
-30 verbose parsed url   search: null,
-30 verbose parsed url   query: null,
-30 verbose parsed url   pathname: '~0.9.1',
-30 verbose parsed url   path: '~0.9.1',
-30 verbose parsed url   href: '~0.9.1' }
-31 verbose addNamed [ 'consolidate', '~0.9.1' ]
-32 verbose addNamed [ null, '>=0.9.1-0 <0.10.0-0' ]
-33 verbose cache add name="dustjs-linkedin" spec="~2.0.3" args=["dustjs-linkedin","~2.0.3"]
-34 verbose parsed url { protocol: null,
-34 verbose parsed url   slashes: null,
-34 verbose parsed url   auth: null,
-34 verbose parsed url   host: null,
-34 verbose parsed url   port: null,
-34 verbose parsed url   hostname: null,
-34 verbose parsed url   hash: null,
-34 verbose parsed url   search: null,
-34 verbose parsed url   query: null,
-34 verbose parsed url   pathname: '~2.0.3',
-34 verbose parsed url   path: '~2.0.3',
-34 verbose parsed url   href: '~2.0.3' }
-35 verbose addNamed [ 'dustjs-linkedin', '~2.0.3' ]
-36 verbose addNamed [ null, '>=2.0.3-0 <2.1.0-0' ]
-37 silly lockFile 86194427-express-3-4-0 express@3.4.0
-38 verbose lock express@3.4.0 C:\Users\Marmik\AppData\Roaming\npm-cache\86194427-express-3-4-0.lock
-39 silly lockFile 999b8a1d-request-2-27-0 request@~2.27.0
-40 verbose lock request@~2.27.0 C:\Users\Marmik\AppData\Roaming\npm-cache\999b8a1d-request-2-27-0.lock
-41 silly lockFile 25e694a9-consolidate-0-9-1 consolidate@~0.9.1
-42 verbose lock consolidate@~0.9.1 C:\Users\Marmik\AppData\Roaming\npm-cache\25e694a9-consolidate-0-9-1.lock
-43 silly lockFile d0c8ad88-dustjs-linkedin-2-0-3 dustjs-linkedin@~2.0.3
-44 verbose lock dustjs-linkedin@~2.0.3 C:\Users\Marmik\AppData\Roaming\npm-cache\d0c8ad88-dustjs-linkedin-2-0-3.lock
-45 silly addNameRange { name: 'request',
-45 silly addNameRange   range: '>=2.27.0-0 <2.28.0-0',
-45 silly addNameRange   hasData: false }
-46 silly addNameRange { name: 'consolidate',
-46 silly addNameRange   range: '>=0.9.1-0 <0.10.0-0',
-46 silly addNameRange   hasData: false }
-47 silly addNameRange { name: 'dustjs-linkedin',
-47 silly addNameRange   range: '>=2.0.3-0 <2.1.0-0',
-47 silly addNameRange   hasData: false }
-48 verbose request where is /dustjs-linkedin
-49 verbose request registry https://registry.npmjs.org/
-50 verbose request id fee86efc2480e74f
-51 verbose url raw /dustjs-linkedin
-52 verbose url resolving [ 'https://registry.npmjs.org/', './dustjs-linkedin' ]
-53 verbose url resolved https://registry.npmjs.org/dustjs-linkedin
-54 verbose request where is https://registry.npmjs.org/dustjs-linkedin
-55 info trying registry request attempt 1 at 12:01:25
-56 http GET https://registry.npmjs.org/dustjs-linkedin
-57 verbose request where is /consolidate
-58 verbose request registry https://registry.npmjs.org/
-59 verbose url raw /consolidate
-60 verbose url resolving [ 'https://registry.npmjs.org/', './consolidate' ]
-61 verbose url resolved https://registry.npmjs.org/consolidate
-62 verbose request where is https://registry.npmjs.org/consolidate
-63 info trying registry request attempt 1 at 12:01:25
-64 verbose etag "98TRGFBBHVX4GEGLQPB2VMHUC"
-65 http GET https://registry.npmjs.org/consolidate
-66 verbose request where is /request
-67 verbose request registry https://registry.npmjs.org/
-68 verbose url raw /request
-69 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
-70 verbose url resolved https://registry.npmjs.org/request
-71 verbose request where is https://registry.npmjs.org/request
-72 info trying registry request attempt 1 at 12:01:25
-73 verbose etag "3LXQXCC5ZDFVX9S4UNH2X1B4T"
-74 http GET https://registry.npmjs.org/request
-75 verbose request where is /express
-76 verbose request registry https://registry.npmjs.org/
-77 verbose url raw /express
-78 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
-79 verbose url resolved https://registry.npmjs.org/express
-80 verbose request where is https://registry.npmjs.org/express
-81 info trying registry request attempt 1 at 12:01:25
-82 verbose etag "AFDEB84JVZ438FCJNWPEWP8TG"
-83 http GET https://registry.npmjs.org/express
-84 info retry will retry, error on last attempt: Error: getaddrinfo EAGAIN
-85 info retry will retry, error on last attempt: Error: getaddrinfo EAGAIN
-86 info retry will retry, error on last attempt: Error: getaddrinfo EAGAIN
-87 info retry will retry, error on last attempt: Error: getaddrinfo EAGAIN
-88 info trying registry request attempt 2 at 12:01:35
-89 verbose etag "98TRGFBBHVX4GEGLQPB2VMHUC"
-90 http GET https://registry.npmjs.org/consolidate
-91 info trying registry request attempt 2 at 12:01:35
-92 http GET https://registry.npmjs.org/dustjs-linkedin
-93 info trying registry request attempt 2 at 12:01:35
-94 verbose etag "3LXQXCC5ZDFVX9S4UNH2X1B4T"
-95 http GET https://registry.npmjs.org/request
-96 info trying registry request attempt 2 at 12:01:35
-97 verbose etag "AFDEB84JVZ438FCJNWPEWP8TG"
-98 http GET https://registry.npmjs.org/express
-99 info retry will retry, error on last attempt: Error: getaddrinfo EAGAIN
-100 info retry will retry, error on last attempt: Error: getaddrinfo EAGAIN
-101 info retry will retry, error on last attempt: Error: getaddrinfo EAGAIN
-102 info retry will retry, error on last attempt: Error: getaddrinfo EAGAIN
-103 info trying registry request attempt 3 at 12:02:35
-104 verbose etag "98TRGFBBHVX4GEGLQPB2VMHUC"
-105 http GET https://registry.npmjs.org/consolidate
-106 info trying registry request attempt 3 at 12:02:35
-107 http GET https://registry.npmjs.org/dustjs-linkedin
-108 info trying registry request attempt 3 at 12:02:35
-109 verbose etag "3LXQXCC5ZDFVX9S4UNH2X1B4T"
-110 http GET https://registry.npmjs.org/request
-111 info trying registry request attempt 3 at 12:02:35
-112 verbose etag "AFDEB84JVZ438FCJNWPEWP8TG"
-113 http GET https://registry.npmjs.org/express
-114 silly registry.get cb [ 304, undefined ]
-115 verbose etag https://registry.npmjs.org/consolidate from cache
-116 silly lockFile d0c8ad88-dustjs-linkedin-2-0-3 dustjs-linkedin@~2.0.3
-117 silly lockFile d0c8ad88-dustjs-linkedin-2-0-3 dustjs-linkedin@~2.0.3
-118 silly registry.get cb [ 304, undefined ]
-119 verbose etag https://registry.npmjs.org/request from cache
-120 silly registry.get cb [ 304, undefined ]
-121 verbose etag https://registry.npmjs.org/express from cache
-122 silly addNameRange number 2 { name: 'consolidate',
-122 silly addNameRange   range: '>=0.9.1-0 <0.10.0-0',
-122 silly addNameRange   hasData: true }
-123 silly addNameRange versions [ 'consolidate',
-123 silly addNameRange   [ '0.0.1',
-123 silly addNameRange     '0.1.0',
-123 silly addNameRange     '0.2.0',
-123 silly addNameRange     '0.3.0',
-123 silly addNameRange     '0.3.1',
-123 silly addNameRange     '0.4.0',
-123 silly addNameRange     '0.5.0',
-123 silly addNameRange     '0.6.0',
-123 silly addNameRange     '0.7.0',
-123 silly addNameRange     '0.8.0',
-123 silly addNameRange     '0.9.0',
-123 silly addNameRange     '0.9.1',
-123 silly addNameRange     '0.10.0' ] ]
-124 verbose addNamed [ 'consolidate', '0.9.1' ]
-125 verbose addNamed [ '0.9.1', '0.9.1' ]
-126 silly lockFile 8ae528db-consolidate-0-9-1 consolidate@0.9.1
-127 verbose lock consolidate@0.9.1 C:\Users\Marmik\AppData\Roaming\npm-cache\8ae528db-consolidate-0-9-1.lock
-128 silly addNameRange number 2 { name: 'request', range: '>=2.27.0-0 <2.28.0-0', hasData: true }
-129 silly addNameRange versions [ 'request',
-129 silly addNameRange   [ '0.10.0',
-129 silly addNameRange     '0.8.3',
-129 silly addNameRange     '0.9.0',
-129 silly addNameRange     '0.9.1',
-129 silly addNameRange     '0.9.5',
-129 silly addNameRange     '1.0.0',
-129 silly addNameRange     '1.1.0',
-129 silly addNameRange     '1.1.1',
-129 silly addNameRange     '1.2.0',
-129 silly addNameRange     '1.9.0',
-129 silly addNameRange     '1.9.1',
-129 silly addNameRange     '1.9.2',
-129 silly addNameRange     '1.9.3',
-129 silly addNameRange     '1.9.5',
-129 silly addNameRange     '1.9.7',
-129 silly addNameRange     '1.9.8',
-129 silly addNameRange     '1.9.9',
-129 silly addNameRange     '2.0.0',
-129 silly addNameRange     '2.0.1',
-129 silly addNameRange     '2.0.2',
-129 silly addNameRange     '2.0.3',
-129 silly addNameRange     '2.0.4',
-129 silly addNameRange     '2.0.5',
-129 silly addNameRange     '2.1.0',
-129 silly addNameRange     '2.1.1',
-129 silly addNameRange     '2.2.0',
-129 silly addNameRange     '2.2.5',
-129 silly addNameRange     '2.2.6',
-129 silly addNameRange     '2.2.9',
-129 silly addNameRange     '2.9.0',
-129 silly addNameRange     '2.9.1',
-129 silly addNameRange     '2.9.2',
-129 silly addNameRange     '2.9.3',
-129 silly addNameRange     '2.9.100',
-129 silly addNameRange     '2.9.150',
-129 silly addNameRange     '2.9.151',
-129 silly addNameRange     '2.9.152',
-129 silly addNameRange     '2.9.153',
-129 silly addNameRange     '2.9.200',
-129 silly addNameRange     '2.9.201',
-129 silly addNameRange     '2.9.202',
-129 silly addNameRange     '2.9.203',
-129 silly addNameRange     '2.10.0',
-129 silly addNameRange     '2.11.0',
-129 silly addNameRange     '2.11.1',
-129 silly addNameRange     '2.11.2',
-129 silly addNameRange     '2.11.3',
-129 silly addNameRange     '2.11.4',
-129 silly addNameRange     '2.12.0',
-129 silly addNameRange     '2.14.0',
-129 silly addNameRange     '2.16.0',
-129 silly addNameRange     '2.16.2',
-129 silly addNameRange     '2.16.4',
-129 silly addNameRange     '2.16.6',
-129 silly addNameRange     '2.18.0',
-129 silly addNameRange     '2.19.0',
-129 silly addNameRange     '2.20.0',
-129 silly addNameRange     '2.21.0',
-129 silly addNameRange     '2.22.0',
-129 silly addNameRange     '2.23.0',
-129 silly addNameRange     '2.24.0',
-129 silly addNameRange     '2.25.0',
-129 silly addNameRange     '2.26.0',
-129 silly addNameRange     '2.27.0',
-129 silly addNameRange     '2.28.0',
-129 silly addNameRange     '2.29.0',
-129 silly addNameRange     '2.30.0',
-129 silly addNameRange     '2.31.0',
-129 silly addNameRange     '2.32.0',
-129 silly addNameRange     '2.33.0',
-129 silly addNameRange     '2.34.0',
-129 silly addNameRange     '2.35.0',
-129 silly addNameRange     '2.36.0',
-129 silly addNameRange     '2.37.0',
-129 silly addNameRange     '2.38.0',
-129 silly addNameRange     '2.39.0',
-129 silly addNameRange     '2.40.0',
-129 silly addNameRange     '2.41.0',
-129 silly addNameRange     '2.42.0',
-129 silly addNameRange     '2.43.0',
-129 silly addNameRange     '2.44.0',
-129 silly addNameRange     '2.45.0',
-129 silly addNameRange     '2.46.0',
-129 silly addNameRange     '2.47.0',
-129 silly addNameRange     '2.48.0',
-129 silly addNameRange     '2.49.0',
-129 silly addNameRange     '2.50.0',
-129 silly addNameRange     '2.51.0',
-129 silly addNameRange     '2.52.0',
-129 silly addNameRange     '2.53.0',
-129 silly addNameRange     '2.54.0' ] ]
-130 verbose addNamed [ 'request', '2.27.0' ]
-131 verbose addNamed [ '2.27.0', '2.27.0' ]
-132 silly lockFile 7b48fbe0-request-2-27-0 request@2.27.0
-133 verbose lock request@2.27.0 C:\Users\Marmik\AppData\Roaming\npm-cache\7b48fbe0-request-2-27-0.lock
-134 silly lockFile 48a83834-onsolidate-consolidate-0-9-1-tgz https://registry.npmjs.org/consolidate/-/consolidate-0.9.1.tgz
-135 verbose lock https://registry.npmjs.org/consolidate/-/consolidate-0.9.1.tgz C:\Users\Marmik\AppData\Roaming\npm-cache\48a83834-onsolidate-consolidate-0-9-1-tgz.lock
-136 silly lockFile 86194427-express-3-4-0 express@3.4.0
-137 silly lockFile 86194427-express-3-4-0 express@3.4.0
-138 verbose addRemoteTarball [ 'https://registry.npmjs.org/consolidate/-/consolidate-0.9.1.tgz',
-138 verbose addRemoteTarball   '9bc97e721d69765f320f232207d4c77fa3e22ca2' ]
-139 silly lockFile 7b48fbe0-request-2-27-0 request@2.27.0
-140 silly lockFile 7b48fbe0-request-2-27-0 request@2.27.0
-141 silly lockFile 999b8a1d-request-2-27-0 request@~2.27.0
-142 silly lockFile 999b8a1d-request-2-27-0 request@~2.27.0
-143 info retry fetch attempt 1 at 12:02:35
-144 verbose fetch to= C:\Users\Marmik\AppData\Local\Temp\npm-856-omtpng7A\registry.npmjs.org\consolidate\-\consolidate-0.9.1.tgz
-145 http GET https://registry.npmjs.org/consolidate/-/consolidate-0.9.1.tgz
-146 error fetch failed https://registry.npmjs.org/consolidate/-/consolidate-0.9.1.tgz
-147 info retry will retry, error on last attempt: Error: getaddrinfo EAGAIN
-148 info retry fetch attempt 2 at 12:02:45
-149 verbose fetch to= C:\Users\Marmik\AppData\Local\Temp\npm-856-omtpng7A\registry.npmjs.org\consolidate\-\consolidate-0.9.1.tgz
-150 http GET https://registry.npmjs.org/consolidate/-/consolidate-0.9.1.tgz
-151 error fetch failed https://registry.npmjs.org/consolidate/-/consolidate-0.9.1.tgz
-152 info retry will retry, error on last attempt: Error: getaddrinfo EAGAIN
-153 info retry fetch attempt 3 at 12:05:23
-154 verbose fetch to= C:\Users\Marmik\AppData\Local\Temp\npm-856-omtpng7A\registry.npmjs.org\consolidate\-\consolidate-0.9.1.tgz
-155 http GET https://registry.npmjs.org/consolidate/-/consolidate-0.9.1.tgz
-156 error fetch failed https://registry.npmjs.org/consolidate/-/consolidate-0.9.1.tgz
-157 silly lockFile 48a83834-onsolidate-consolidate-0-9-1-tgz https://registry.npmjs.org/consolidate/-/consolidate-0.9.1.tgz
-158 silly lockFile 48a83834-onsolidate-consolidate-0-9-1-tgz https://registry.npmjs.org/consolidate/-/consolidate-0.9.1.tgz
-159 silly lockFile 8ae528db-consolidate-0-9-1 consolidate@0.9.1
-160 silly lockFile 8ae528db-consolidate-0-9-1 consolidate@0.9.1
-161 silly lockFile 25e694a9-consolidate-0-9-1 consolidate@~0.9.1
-162 silly lockFile 25e694a9-consolidate-0-9-1 consolidate@~0.9.1
-163 error Error: getaddrinfo EAGAIN
-163 error     at errnoException (dns.js:37:11)
-163 error     at Object.onanswer [as oncomplete] (dns.js:124:16)
-164 error If you need help, you may report this *entire* log,
-164 error including the npm and node versions, at:
-164 error     <http://github.com/npm/npm/issues>
-165 error System Windows_NT 6.2.9200
-166 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
-167 error cwd C:\Users\Marmik\Desktop\snapSearch\alchemyapi_node
-168 error node -v v0.10.35
-169 error npm -v 1.4.28
-170 error syscall getaddrinfo
-171 error code EAGAIN
-172 error errno EAGAIN
-173 verbose exit [ 1, true ]
+14 verbose parsed url   pathname: 'consolidate@*',
+14 verbose parsed url   path: 'consolidate@*',
+14 verbose parsed url   href: 'consolidate@*' }
+15 verbose cache add name="consolidate" spec="*" args=["consolidate","*"]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: '*',
+16 verbose parsed url   path: '*',
+16 verbose parsed url   href: '*' }
+17 verbose addNamed [ 'consolidate', '*' ]
+18 verbose addNamed [ null, '*' ]
+19 silly lockFile 8a5f899a-consolidate consolidate@*
+20 verbose lock consolidate@* /Users/skannedara/.npm/8a5f899a-consolidate.lock
+21 silly addNameRange { name: 'consolidate', range: '*', hasData: false }
+22 verbose request where is /consolidate
+23 verbose request registry http://registry.npmjs.org/
+24 verbose request id 90d8bae19f56d92e
+25 verbose url raw /consolidate
+26 verbose url resolving [ 'http://registry.npmjs.org/', './consolidate' ]
+27 verbose url resolved http://registry.npmjs.org/consolidate
+28 verbose request where is http://registry.npmjs.org/consolidate
+29 info trying registry request attempt 1 at 12:35:20
+30 verbose etag "9UIMTL24RA7J7QH0I45AGI9MQ"
+31 http GET http://registry.npmjs.org/consolidate
+32 http 401 http://registry.npmjs.org/consolidate
+33 verbose bad json <HTML><HEAD>
+33 verbose bad json <!-- Editor: Jack Mackenzie -->
+33 verbose bad json <!-- Company: FishNet Security -->
+33 verbose bad json <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+33 verbose bad json <title>: Access Denied</title>
+33 verbose bad json <style type="text/css">
+33 verbose bad json BODY {
+33 verbose bad json 	font-family : Verdana, Arial, Helvetica, sans-serif;
+33 verbose bad json 	font-size : 11pt;
+33 verbose bad json 	color : #000000;
+33 verbose bad json }
+33 verbose bad json H1 {
+33 verbose bad json 	font-family : Verdana, Arial, Helvetica, sans-serif;
+33 verbose bad json 	font-size : 12pt;
+33 verbose bad json 	font-weight : bold;
+33 verbose bad json 	color : #cc0000;
+33 verbose bad json }
+33 verbose bad json A {
+33 verbose bad json 	color : #0000cc;
+33 verbose bad json }
+33 verbose bad json A:VISITED {
+33 verbose bad json 	color : #660066;
+33 verbose bad json }
+33 verbose bad json A:HOVER {
+33 verbose bad json 	color : #cc0000;
+33 verbose bad json }
+33 verbose bad json TD.footer {
+33 verbose bad json 	font-size : 8pt;
+33 verbose bad json 	font-family : Verdana, Arial, Helvetica, sans-serif;
+33 verbose bad json 	padding : 5px 5px 5px 5px;
+33 verbose bad json 	border-top-width: 1px;
+33 verbose bad json 	border-top-style: solid;
+33 verbose bad json 	border-top-color: #A7ABA2;
+33 verbose bad json }
+33 verbose bad json .bodytext_bold {
+33 verbose bad json 	font-family : Verdana, Arial, Helvetica, sans-serif;
+33 verbose bad json 	font-size : 11pt;
+33 verbose bad json 	color : #000000;
+33 verbose bad json 	font-weight: bold;
+33 verbose bad json }
+33 verbose bad json .bodytext_small {
+33 verbose bad json 	font-family : Verdana, Arial, Helvetica, sans-serif;
+33 verbose bad json 	font-size : 9pt;
+33 verbose bad json 	color : #000000;
+33 verbose bad json }
+33 verbose bad json .detailstext {
+33 verbose bad json 	font-size: 8pt;
+33 verbose bad json 	font-family: Verdana, Arial, Helvetica, sans-serif;
+33 verbose bad json }
+33 verbose bad json .white_text {
+33 verbose bad json 	font-family: Verdana, Arial, Helvetica, sans-serif;
+33 verbose bad json 	color: #FFFFFF;
+33 verbose bad json }
+33 verbose bad json .about_text {
+33 verbose bad json 	font-family: Verdana, Arial, Helvetica, sans-serif;
+33 verbose bad json 	color: #000099;
+33 verbose bad json 	font-size: 9px;
+33 verbose bad json 	text-align:right;
+33 verbose bad json }
+33 verbose bad json </style>
+33 verbose bad json </head>
+33 verbose bad json <body bgcolor="#FFFFFF">
+33 verbose bad json <table width="100" border="0" cellspacing="0" cellpadding="0">
+33 verbose bad json   <tr>
+33 verbose bad json     <td bgcolor="#000066" class="white_text"><img src="http://portal/insitedocs/Communications/inSite/CaesarsBrands/CaesarsEnt-
+33 verbose bad json LogoColor.jpg" width=300 height=200 border=0></td>
+33 verbose bad json   </tr>
+33 verbose bad json   <tr bgcolor="#ffffff">
+33 verbose bad json     <td><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=8 border=0></td>
+33 verbose bad json   </tr>
+33 verbose bad json   </table>
+33 verbose bad json <table width="720" cellpadding="15" cellspacing="0" border="0">
+33 verbose bad json   <tr>
+33 verbose bad json     <td><blockquote>
+33 verbose bad json         <h1>Access Denied</h1>
+33 verbose bad json         <p>Your credentials could not be authenticated: "Credentials are missing.". You will not be permitted access until your credentials can be verified.</p>
+33 verbose bad json <table width="720" cellpadding="0" cellspacing="0" border="0">
+33 verbose bad json   <tr>
+33 verbose bad json     <td height=1 bgcolor="#A7ABA2"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1
+33 verbose bad json height=1 border=0></td>
+33 verbose bad json   </tr>
+33 verbose bad json </table>
+33 verbose bad json <table width="720" cellpadding="15" cellspacing="0" border="0">
+33 verbose bad json   <tr>
+33 verbose bad json     <td><blockquote>
+33 verbose bad json         <table width="600" border="0">
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+33 verbose bad json border=0></td>
+33 verbose bad json             <td width="450"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+33 verbose bad json border=0></td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150" class="detailstext">Source IP address:</td>
+33 verbose bad json             <td width="450" class="detailstext">10.135.201.152</td>
+33 verbose bad json </tr>
+33 verbose bad json <tr class="detailstext">
+33 verbose bad json <td width="150" class="detailstext">Hostname:</td>
+33 verbose bad json <td width="450" class=detailstext">10.135.201.152</td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150" class="detailstext">Exception ID:</td>
+33 verbose bad json             <td width="450" class="detailstext">authentication_failed</td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150" class="detailstext">Authenticated Username:</td>
+33 verbose bad json             <td width="450" class="detailstext"></td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150">URL Requested:</td>
+33 verbose bad json             <td width="450">http://registry.npmjs.org/consolidate</td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150">URL Category: </td>
+33 verbose bad json             <td width="450">Technology/Internet</td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json           <td width="150">Proxy Name: </td>
+33 verbose bad json           <td width="450">entwbc02</td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150">Date:</td>
+33 verbose bad json             <td width="450">2015-02-23 20:29:03</td>
+33 verbose bad json           </tr>
+33 verbose bad json         </table>
+33 verbose bad json       </blockquote></td>
+33 verbose bad json   </tr>
+33 verbose bad json </table>
+33 verbose bad json         <p class="bodytext_small">If you received this message while attempting to access an <font color="red">APPROVED</font> business related resource, please click <a href="http://help">HERE</a> to submit a Technical Support Request and paste the information below into the detailed description.</p><br>
+33 verbose bad json 		<p class="bodytext_small">If you received this message while attempting to access a <b>NEW</b> business related resource requiring business approval and I.T. change management, please click <a href="http://help">HERE</a> to submit a Technical Support Request. Within the Technical Support Request, please include an authorized request from an associated department director, a description of the business need, and the information below.</P><br>
+33 verbose bad json         <p class="bodytext_small">Note: Microsoft Internet Explorer (commonly abbreviated IE or MSIE) is the Caesars Entertainment Information Technology department&#39s approved graphical web browser. If you do not have IE installed on your computer, please contact your Local I.T. group for support.</p>
+33 verbose bad json     </blockquote></td>
+33 verbose bad json   </tr>
+33 verbose bad json </table>
+33 verbose bad json <table width="720" cellpadding="0" cellspacing="0" border="0">
+33 verbose bad json   <tr>
+33 verbose bad json     <td height=1 bgcolor="#A7ABA2"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1
+33 verbose bad json height=1 border=0></td>
+33 verbose bad json   </tr>
+33 verbose bad json </table>
+33 verbose bad json <table width="720" cellpadding="15" cellspacing="0" border="0">
+33 verbose bad json   <tr>
+33 verbose bad json     <td><blockquote>
+33 verbose bad json         <table width="600" border="0">
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+33 verbose bad json border=0></td>
+33 verbose bad json             <td width="450"><img src="http://www.bluecoat.com/images/sales/spacer.gif" width=1 height=1
+33 verbose bad json border=0></td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150" class="detailstext">Source IP address:</td>
+33 verbose bad json             <td width="450" class="detailstext">10.135.201.152</td>
+33 verbose bad json </tr>
+33 verbose bad json <tr class="detailstext">
+33 verbose bad json <td width="150" class="detailstext">Hostname:</td>
+33 verbose bad json <td width="450" class=detailstext">10.135.201.152</td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150" class="detailstext">Exception ID:</td>
+33 verbose bad json             <td width="450" class="detailstext">authentication_failed</td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150" class="detailstext">Authenticated Username:</td>
+33 verbose bad json             <td width="450" class="detailstext"></td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150">URL Requested:</td>
+33 verbose bad json             <td width="450">http://registry.npmjs.org/consolidate</td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150">URL Category: </td>
+33 verbose bad json             <td width="450">Technology/Internet</td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json           <td width="150">Proxy Name: </td>
+33 verbose bad json           <td width="450">entwbc02</td>
+33 verbose bad json           </tr>
+33 verbose bad json           <tr class="detailstext">
+33 verbose bad json             <td width="150">Date:</td>
+33 verbose bad json             <td width="450">2015-02-23 20:29:03</td>
+33 verbose bad json           </tr>
+33 verbose bad json         </table>
+33 verbose bad json       </blockquote></td>
+33 verbose bad json   </tr>
+33 verbose bad json </table>
+33 verbose bad json <table cellpadding="0" cellspacing="0" class="footer" width="720">
+33 verbose bad json   <tr>
+33 verbose bad json     <td class="footer"">(C)2013 Blue Coat Systems, Inc. </td>
+33 verbose bad json   </tr>
+33 verbose bad json </table>
+33 verbose bad json </body></HTML>
+34 error registry error parsing json
+35 verbose headers { 'cache-control': 'no-cache',
+35 verbose headers   pragma: 'no-cache',
+35 verbose headers   'www-authenticate': 'NEGOTIATE, NTLM, BASIC realm="CaesarsIWA"',
+35 verbose headers   'content-type': 'text/html; charset=utf-8',
+35 verbose headers   'proxy-connection': 'close',
+35 verbose headers   'set-cookie': [ 'BCSI-CS-6343d6a851f6a4f2=2; Path=/' ],
+35 verbose headers   connection: 'close',
+35 verbose headers   'content-length': '7423' }
+36 silly registry.get cb [ 304, undefined ]
+37 verbose etag http://registry.npmjs.org/consolidate from cache
+38 silly addNameRange number 2 { name: 'consolidate', range: '*', hasData: true }
+39 silly addNameRange versions [ 'consolidate',
+39 silly addNameRange   [ '0.0.1',
+39 silly addNameRange     '0.1.0',
+39 silly addNameRange     '0.2.0',
+39 silly addNameRange     '0.3.0',
+39 silly addNameRange     '0.3.1',
+39 silly addNameRange     '0.4.0',
+39 silly addNameRange     '0.5.0',
+39 silly addNameRange     '0.6.0',
+39 silly addNameRange     '0.7.0',
+39 silly addNameRange     '0.8.0',
+39 silly addNameRange     '0.9.0',
+39 silly addNameRange     '0.9.1',
+39 silly addNameRange     '0.10.0' ] ]
+40 verbose addNamed [ 'consolidate', '0.10.0' ]
+41 verbose addNamed [ '0.10.0', '0.10.0' ]
+42 silly lockFile 4f259ef6-consolidate-0-10-0 consolidate@0.10.0
+43 verbose lock consolidate@0.10.0 /Users/skannedara/.npm/4f259ef6-consolidate-0-10-0.lock
+44 silly lockFile d67b7e7e-nsolidate-consolidate-0-10-0-tgz http://registry.npmjs.org/consolidate/-/consolidate-0.10.0.tgz
+45 verbose lock http://registry.npmjs.org/consolidate/-/consolidate-0.10.0.tgz /Users/skannedara/.npm/d67b7e7e-nsolidate-consolidate-0-10-0-tgz.lock
+46 verbose addRemoteTarball [ 'http://registry.npmjs.org/consolidate/-/consolidate-0.10.0.tgz',
+46 verbose addRemoteTarball   '81f1a6ceba1247df9cef7a261ce527c2ce538f7a' ]
+47 info retry fetch attempt 1 at 12:35:21
+48 verbose fetch to= /tmp/npm-38342-DoT_kVqv/registry.npmjs.org/consolidate/-/consolidate-0.10.0.tgz
+49 http GET http://registry.npmjs.org/consolidate/-/consolidate-0.10.0.tgz
+50 http 401 http://registry.npmjs.org/consolidate/-/consolidate-0.10.0.tgz
+51 error fetch failed http://registry.npmjs.org/consolidate/-/consolidate-0.10.0.tgz
+52 silly lockFile d67b7e7e-nsolidate-consolidate-0-10-0-tgz http://registry.npmjs.org/consolidate/-/consolidate-0.10.0.tgz
+53 silly lockFile d67b7e7e-nsolidate-consolidate-0-10-0-tgz http://registry.npmjs.org/consolidate/-/consolidate-0.10.0.tgz
+54 silly lockFile 4f259ef6-consolidate-0-10-0 consolidate@0.10.0
+55 silly lockFile 4f259ef6-consolidate-0-10-0 consolidate@0.10.0
+56 silly lockFile 8a5f899a-consolidate consolidate@*
+57 silly lockFile 8a5f899a-consolidate consolidate@*
+58 error Error: 401 Unauthorized
+58 error     at WriteStream.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/fetch.js:58:12)
+58 error     at WriteStream.emit (events.js:117:20)
+58 error     at evalmachine.<anonymous>:1609:14
+58 error     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+58 error     at Object.oncomplete (evalmachine.<anonymous>:107:15)
+59 error If you need help, you may report this *entire* log,
+59 error including the npm and node versions, at:
+59 error     <http://github.com/npm/npm/issues>
+60 error System Darwin 14.0.0
+61 error command "node" "/usr/local/bin/npm" "install"
+62 error cwd /Users/skannedara/Documents/MyProject/Alkamai_Text_From_Image
+63 error node -v v0.10.32
+64 error npm -v 1.4.28
+65 verbose exit [ 1, true ]

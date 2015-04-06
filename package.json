@@ -1,17 +1,27 @@
 {
-  "name"         : "node-todo",
-  "version"      : "0.0.0",
+  "name"         : "snapSearch",
+  "version"      : "0.0.1",
   "description"  : "AlchemyAPI application.",
-  "main"         : "server.js",
-  "author"       : "Siva",
+  "main"         : "app.js",
+  "author"       : "Marmik",
   "dependencies" : {
     "express"    : "~4.7.2",
     "rimraf"     : "2.2.2",
     "mkdirp"     : "0.3.5",
-    "consolidate": "*"
+    "consolidate": "*",
+    "morgan": "*",
+    "body-parser": "*",
+    "method-override":"*",
+    "request":"*",
+    "busboy":"*",
+    "dustjs-linkedin":"*"
+
   },
   "repository"   : {
     "type"            : "git",
     "url"             : "http://github.com/npm/npm.git"
+  },
+  "engines" : {
+    "node": "0.10.x"
   }
 }
